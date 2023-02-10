@@ -18,3 +18,32 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  list-style: none;
+  /* display: flex; */
+}
+
+li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+img {
+  display: block;
+  width: 10%;
+  /* height: 20%; */
+  /* width: 90px; */
+}
+
+.country-title {
+  display: flex;
+  gap: 15px;
+}
+
+.country-property {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
