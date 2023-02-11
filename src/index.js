@@ -48,8 +48,8 @@ function actsOnTheLengthOfTheArray(arrCountries) {
 }
 
 /**
- *
- * @param {*} arr
+ * merges the markups of several countries into one inserts it into the document
+ * @param {*} arr Object is array of countries which contains properties
  */
 function markupForManyCountries(arr) {
   cleanMarkup();
@@ -58,8 +58,6 @@ function markupForManyCountries(arr) {
     ''
   );
   countryList.innerHTML = markup;
-
-  console.log(markup);
 }
 
 /**
