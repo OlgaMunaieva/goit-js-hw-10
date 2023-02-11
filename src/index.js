@@ -61,9 +61,9 @@ function markupForManyCountries(arr) {
 }
 
 /**
- *
- * @param {*} param0
- * @returns
+ * create the markup for one country
+ * @param {*} param0 destructured object properties (country) - name and flag
+ * @returns markup for one country
  */
 function createMarkup({ name, flag }) {
   return `
@@ -75,8 +75,8 @@ function createMarkup({ name, flag }) {
 }
 
 /**
- *
- * @param {*} param0
+ * creates an expanded markup for one country
+ * @param {*} param0 destructured object properties (country) - name, capital, population, flag, languages
  */
 function markupForOneCountry({ name, capital, population, flag, languages }) {
   cleanMarkup();
@@ -88,17 +88,17 @@ function markupForOneCountry({ name, capital, population, flag, languages }) {
 }
 
 /**
- *
- * @param {*} err
+ * error handling and output of information about it
+ * @param {*} err error after executing a promise (requesting country data)
  */
 function onError(err) {
-  console.error(err);
+  // console.error(err);
   cleanMarkup();
   Notiflix.Notify.failure(`Oops, there is no country with that name`);
 }
 
 /**
- *
+ * clearing the markup inserted on the page
  */
 function cleanMarkup() {
   countryList.innerHTML = '';
